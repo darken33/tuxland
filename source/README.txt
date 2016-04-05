@@ -1,5 +1,5 @@
 ==============================================================================
-Tuxland v0.1
+Tuxland v0.1.1
 Jeu de Plateforme / Arcade écrit en Java
 Copyright (c) 2006 Philippe Bousquet <Darken33@free.fr>
 http://darken33.free.fr/
@@ -26,11 +26,12 @@ continents afin de les récupérer.
 
 ------------------------------------------------------------------------------
 
-LES BASES DU JEU
-----------------
+EXECUTER LE JEU
+---------------
 
 Le jeu fonctionne à la fois sous GNU/Linux et sous Windows, il necessite q'un
-JRE Java soit installé sur votre machine, vous pouvez en trouver un sur
+JRE Java soit installé sur votre machine, vous pouvez le télécharger gratuitement
+sur le net.
 
 Sous Windows : Il vous faut executer le script tuxland.bat
 
@@ -79,7 +80,6 @@ Graphismes et Animations :
  - André Bouaziz (Heder) <Heder1fr@yahoo.fr>
  - Philippe Bousquet (Darken33) <Darken33@free.fr>
  - Certains graphismes sont tirées d'autres jeux :
-    * Zlob : http://toweld.free.fr/Zlob/
     * XBill : http://www.xbill.org/
     * SuperTux : http://supertux.berlios.de/
 
@@ -87,6 +87,10 @@ Graphismes et Animations :
 
 CHANGELOG
 ---------
+
+* Version 0.1.1 :
+  - En pause les ennemies continuaient à se déplacer
+  - En pause la barre statut n'etait pas réactualisée
 
 * Version 0.1 :
   - Première version de tuxland
@@ -120,6 +124,8 @@ Code / Programme :
   Copyright (c) 2006 Philippe Bousquet.
 
 Musiques et sons :
+  Les sons et musiques sont distribué sous licence ARTISTIQUE (cf arts.txt)
+  
   Copyright (c) 2006 Thierry Bousquet.
   
 ==============================================================================

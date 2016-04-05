@@ -35,7 +35,7 @@ package darken.games.utils;
 public interface Params{
 
 	/** Version du jeu */
-    public final static String VERSION = "0.1";
+    public final static String VERSION = "0.1.1";
 
 	/** Repertoires de images */
     public final static String IMG_DIR = "share/images";

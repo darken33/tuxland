@@ -78,6 +78,7 @@ public class Sprite extends Component implements Runnable, Action
     protected ImageDisplayer imageDisplayer = null;
     protected Rectangle oldR = null;
     private boolean active = false;
+    private boolean paused = false;
     
     /**
      * Sprite - Constructeur
@@ -122,6 +123,10 @@ public class Sprite extends Component implements Runnable, Action
     {
 	  active = a;
     }
+    public void setPaused(boolean a)
+    {
+	  paused = a;
+    }
 
     /**
      * isActive - Le perso est il actif ?
@@ -130,6 +135,10 @@ public class Sprite extends Component implements Runnable, Action
     public boolean isActive()
     {
 	  return active;
+    }
+    public boolean isPaused()
+    {
+	  return paused;
     }
     
     /**
@@ -474,8 +483,11 @@ public class Sprite extends Component implements Runnable, Action
       // boucle infini
 	  while(true)
 	  {
-	  	// On met à jour les deplacements
-	    if(levelMatrix!=null && isActive())	updatePlacement();
+	  	
+	    if(levelMatrix!=null && isActive())
+	    	{
+	    	  updatePlacement();
+	    	}
 	    try
 		{
 		  Thread.sleep(20);

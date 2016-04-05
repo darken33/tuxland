@@ -381,10 +381,11 @@ public class GameZone extends Component implements Runnable, KeyListener
 	  	// Afficher le nombre de vies
 		mainFrame.getStatusBar().setLivesLid(4-tux.getContinue());
 		// Si la zone de jeu n'est pas active, on effectue une pause d'1s et on reboucle 
-	    if(!isActive()) 
+	    if(!isActive() || mainFrame.getScreen()==ScreenNames.PAUSED) 
 	    {
 		  try
-		  { 
+		  {
+		  	enemies.setPause(true);
 		  	Thread.sleep(1000); 
 		  }
 		  catch ( InterruptedException e)
@@ -394,7 +395,9 @@ public class GameZone extends Component implements Runnable, KeyListener
 		  } 
 		  continue;
 	    }
-	    // Si le hero n'est pas actif, on reinitialise les entrées claviers 
+	    else
+	    {	// Si le hero n'est pas actif, on reinitialise les entrées claviers 
+	  	enemies.setPause(false);
 	    if(!tux.isActive()) 
 	    {
 	      down=false;
@@ -437,6 +440,7 @@ public class GameZone extends Component implements Runnable, KeyListener
 		  e.printStackTrace();
 		  break;
 	    } 
+	  }
 	  }
     }
 

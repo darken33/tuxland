@@ -197,7 +197,10 @@ public class StatusBar extends Panel implements Runnable,StatusNames
 	  	// Pause si la barre est inactive
 	    if(!isActive()) 
 	    {
-		  try{ Thread.sleep(1000); }
+		  try{ 
+		    display();
+		  	Thread.sleep(1000); 
+		  }
 		  catch ( InterruptedException e) { e.printStackTrace();break; } 
 		  continue;
 	    }
@@ -253,7 +256,7 @@ public class StatusBar extends Panel implements Runnable,StatusNames
       // Afficher le fond
 	  imageDisplayer.displayImageNum(g, BG_X, BG_Y, BG_ID, 0);
 	  // Afficher le nombre de vies
-	  if(livesLid>0) imageDisplayer.displayImageNum(g, LIVES_X, LIVES_Y, LIVES_ID, livesLid-1);
+	  if(livesLid>0 && livesLid<4) imageDisplayer.displayImageNum(g, LIVES_X, LIVES_Y, LIVES_ID, livesLid-1);
 	  // Aficher le pourcentage
 	  if (imgCD*10<getPercent()) imgCD++;
 	  imageDisplayer.displayImageNum(g, CD_COLLECTED_X, CD_COLLECTED_Y, CDROM_ID, imgCD);

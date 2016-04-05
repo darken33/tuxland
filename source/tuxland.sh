@@ -36,8 +36,14 @@ then
   exit 1
 fi
 
+# Execute xset -r
+xset -r
+
 # Execute Tuxland
 $JAVA -classpath "$TUXLANDDIR/lib/Tuxland.jar" darken.games.tuxland.Tuxland
+
+# Execute xset r
+xset r
 
 # Output the help
 

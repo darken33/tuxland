@@ -87,6 +87,21 @@ public class SpriteGroup extends Hashtable
     }
 
     /**
+     * fill - Remplit le gestionnaire des ennemies avec les infos du Level
+     * @return boolean true=OK, false=KO
+     */
+    public boolean setPause(boolean p)
+    {
+ 	  Enemy enemy = null;
+	  for (Enumeration e = elements(); e.hasMoreElements();)
+	  {
+	    enemy = (Enemy)e.nextElement();
+	    enemy.setPaused(p);
+	  }
+	  return true;
+    }
+
+    /**
      * addSprite - Ajouter un ennemi augestionnaire
      * @param sprite Ennemi à ajouter
      * @return boolean true=OK, false=KO

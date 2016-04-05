@@ -119,7 +119,7 @@ public class Enemy extends Sprite implements Monsters
 	    try
 		{ 
 	      // Si la matrice du niveau existe et que l'ennemi est actif	
-		  if(levelMatrix!=null && active )
+		  if(levelMatrix!=null && active && !isPaused())
 		  {
 		  	// Mettre à jour ses déplacements
 		    updatePlacement();  

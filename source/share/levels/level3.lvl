@@ -31,5 +31,5 @@ matrix
 hero=tux:1:18:1:
 enemies=xbill_0:4:9:1:,xbill_1:20:9:-1:,virus_0:4:13:1:,virus_1:20:13:-1:,virus_2:12:5:1:,
 item=cdrom_0:4:1:40:40,cdrom_1:20:1:40:40,cdrom_2:12:12:40:40,cdrom_3:1:6:40:40,cdrom_4:23:6:40:40,fish_0:5:15:40:40,fish_1:19:15:40:40,fish_2:6:15:40:40,fish_3:18:15:40:40,fish_4:11:11:40:40,fish_5:12:11:40:40,fish_6:13:11:40:40,fish_7:7:6:40:40,fish_8:17:6:40:40,fish_9:12:3:40:40,fish_10:12:4:40:40,fish_11:12:5:40:40,
-music=musique1.wav
+music=Level_1.wav
 EOF.
